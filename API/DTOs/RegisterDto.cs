@@ -8,5 +8,6 @@ public class RegisterDto
     public string Username { get; set; }
 
     [Required]
+    [StringLength(10, MinimumLength = 4)]
     public string Password { get; set; }
 }

@@ -12,5 +12,6 @@ public class AutoMapperProfiles : Profile
         CreateMap<AppUser, MemberDto>()
             .ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.DateOfBirth.CalculateAge()));
         CreateMap<Entry, EntryDto>();
+        CreateMap<MemberUpdateDto, AppUser>();
     }
 }

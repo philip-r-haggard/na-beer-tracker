@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-2">
-        <p *ngFor="let member of members" class="member-button bg-dark" routerLink="/members/{{member.userName}}">
+        <p *ngFor="let member of members$ | async" 
+        class="member-button bg-dark" routerLink="/members/{{member.userName}}">
             {{member.knownAs}}
         </p>
     </div>

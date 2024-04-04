@@ -1,191 +1,76 @@
 [
     {
-        "UserName": "Audrey",
+        "UserName": "Philip",
         "DateOfBirth": "1958-08-21",
-        "KnownAs": "Audrey",
+        "KnownAs": "Philip",
         "Created": "2019-05-04",
         "LastActive": "2020-06-06",
-        "City": "Hoagland",
-        "Country": "French Southern Territories",
+        "City": "Starkville, MS",
+        "Country": "United States",
         "Entries": [
             {
-                "Title": "NA Hazy IPA",
+                "Title": "Sam Adams Just the Haze IPA",
                 "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
-            },
-            {
-                "Title": "NA Lager",
-                "Description": "A good classic American lager."
             }
         ]
     },
     {
-        "UserName": "Felecia",
+        "UserName": "Lucas",
         "DateOfBirth": "1961-12-10",
-        "KnownAs": "Felecia",
+        "KnownAs": "Lucas",
         "Created": "2019-07-10",
         "LastActive": "2020-06-21",
-        "City": "Southmont",
-        "Country": "Macau",
+        "City": "Decatur, AL",
+        "Country": "United States",
         "Entries": [
             {
-                "Title": "NA Hazy IPA",
+                "Title": "Sam Adams Just the Haze IPA",
                 "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
-            },
-            {
-                "Title": "NA Lager",
-                "Description": "A good classic American lager."
             }
         ]
     },
     {
-        "UserName": "Stefanie",
+        "UserName": "Will",
         "DateOfBirth": "1959-07-09",
-        "KnownAs": "Stefanie",
+        "KnownAs": "Will",
         "Created": "2019-07-14",
         "LastActive": "2020-06-29",
-        "City": "Biehle",
-        "Country": "Croatia (Hrvatska)",
+        "City": "Jackson, MS",
+        "Country": "United States",
         "Entries": [
             {
-                "Title": "NA Hazy IPA",
+                "Title": "Sam Adams Just the Haze IPA",
                 "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
-            },
-            {
-                "Title": "NA Lager",
-                "Description": "A good classic American lager."
             }
         ]
     },
     {
-        "UserName": "Casey",
+        "UserName": "Georgia",
         "DateOfBirth": "1953-03-05",
-        "KnownAs": "Casey",
+        "KnownAs": "Georgia",
         "Created": "2020-05-28",
         "LastActive": "2020-05-30",
-        "City": "Sheatown",
-        "Country": "Mexico",
+        "City": "Birmingham, AL",
+        "Country": "United States",
         "Entries": [
             {
-                "Title": "NA Hazy IPA",
+                "Title": "Sam Adams Just the Haze IPA",
                 "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
-            },
-            {
-                "Title": "NA Lager",
-                "Description": "A good classic American lager."
             }
         ]
     },
     {
-        "UserName": "Fanny",
+        "UserName": "Jared",
         "DateOfBirth": "1969-01-10",
-        "KnownAs": "Fanny",
+        "KnownAs": "Jared",
         "Created": "2020-05-18",
         "LastActive": "2020-05-14",
-        "City": "Rosburg",
-        "Country": "Nauru",
+        "City": "Jackson, MS",
+        "Country": "United States",
         "Entries": [
             {
-                "Title": "NA Hazy IPA",
+                "Title": "Sam Adams Just the Haze IPA",
                 "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
-            },
-            {
-                "Title": "NA Lager",
-                "Description": "A good classic American lager."
-            }
-        ]
-    },
-    {
-        "UserName": "Baker",
-        "DateOfBirth": "1968-08-26",
-        "KnownAs": "Baker",
-        "Created": "2019-10-19",
-        "LastActive": "2020-05-31",
-        "City": "Valmy",
-        "Country": "Iceland",
-        "Entries": [
-            {
-                "Title": "NA Hazy IPA",
-                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
-            },
-            {
-                "Title": "NA Lager",
-                "Description": "A good classic American lager."
-            }
-        ]
-    },
-    {
-        "UserName": "Trujillo",
-        "DateOfBirth": "1951-03-01",
-        "KnownAs": "Trujillo",
-        "Created": "2020-01-28",
-        "LastActive": "2020-06-22",
-        "City": "Davenport",
-        "Country": "Pitcairn",
-        "Entries": [
-            {
-                "Title": "NA Hazy IPA",
-                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
-            },
-            {
-                "Title": "NA Lager",
-                "Description": "A good classic American lager."
-            }
-        ]
-    },
-    {
-        "UserName": "Logan",
-        "DateOfBirth": "1990-09-12",
-        "KnownAs": "Logan",
-        "Created": "2020-03-03",
-        "LastActive": "2020-05-24",
-        "City": "Brazos",
-        "Country": "Sweden",
-        "Entries": [
-            {
-                "Title": "NA Hazy IPA",
-                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
-            },
-            {
-                "Title": "NA Lager",
-                "Description": "A good classic American lager."
-            }
-        ]
-    },
-    {
-        "UserName": "Bass",
-        "DateOfBirth": "1996-06-28",
-        "KnownAs": "Bass",
-        "Created": "2019-04-30",
-        "LastActive": "2020-06-04",
-        "City": "Selma",
-        "Country": "Angola",
-        "Entries": [
-            {
-                "Title": "NA Hazy IPA",
-                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
-            },
-            {
-                "Title": "NA Lager",
-                "Description": "A good classic American lager."
-            }
-        ]
-    },
-    {
-        "UserName": "Mathews",
-        "DateOfBirth": "1986-11-10",
-        "KnownAs": "Mathews",
-        "Created": "2019-02-23",
-        "LastActive": "2020-05-23",
-        "City": "Norvelt",
-        "Country": "Estonia",
-        "Entries": [
-            {
-                "Title": "NA Hazy IPA",
-                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
-            },
-            {
-                "Title": "NA Lager",
-                "Description": "A good classic American lager."
             }
         ]
     }

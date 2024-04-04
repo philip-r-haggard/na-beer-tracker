@@ -79,19 +79,20 @@ export class MemberEditComponent implements OnInit {
       this.clearEntryForm(); // Clear the entry form after creating a new entry
     });
   }
-  
+
   editEntry(entry: Entry): void {
     this.editedEntry = { ...entry }; // Copy the entry object to edit
   }
 
   updateEntry(entry: Entry): void {
     const entryDto: EntryDto = {
-      title: entry.title!,
-      description: entry.description!,
-      username: this.member!.userName
+      title: this.editedEntry.title!,
+      description: this.editedEntry.description!,
+      username: this.member?.userName!
     };
+
     // Assuming you have a service method to update an entry
-    this.memberService.updateEntry(entryDto, entry.id!).subscribe(() => {
+    this.memberService.updateEntry(entryDto, entry.id ?? 0).subscribe(() => {
       this.toastr.success('Entry updated successfully');
       this.loadUserEntries(this.user!.username); // Reload the user entries after updating
       this.editedEntry = {}; // Clear the editedEntry object
@@ -100,6 +101,8 @@ export class MemberEditComponent implements OnInit {
       console.error(error); // Log any errors to the console
     });
   }
+
+
 
   deleteEntry(entryId?: number): void {
     if (entryId !== undefined && entryId !== null) {
@@ -113,8 +116,8 @@ export class MemberEditComponent implements OnInit {
       // Handle the case where entryId is undefined or null
       console.error('Cannot delete entry: Invalid entry ID');
     }
-  }  
-  
+  }
+
 
   clearEntryForm(): void {
     this.newEntryTitle = '';

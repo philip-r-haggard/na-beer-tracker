@@ -81,7 +81,7 @@
                     <button (click)="deleteEntry(entry.id)" class="btn btn-danger">Delete</button>
                     <!-- Edit form -->
                     <div *ngIf="entry.id === editedEntry.id">
-                        <h4>Edit Entry</h4>
+                        <h4 style="margin-top: 20px;">Edit Entry</h4>
                         <form (submit)="updateEntry(entry)">
                             <div class="form-group">
                                 <label>Title:</label>
@@ -91,7 +91,7 @@
                                 <label>Description:</label>
                                 <textarea [(ngModel)]="editedEntry.description" name="description" class="form-control" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Save</button>
                         </form>
                 </div>
             </div>

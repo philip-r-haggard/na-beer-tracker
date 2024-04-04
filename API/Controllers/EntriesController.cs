@@ -28,7 +28,7 @@ namespace API.Controllers
             {
                 return NotFound("User not found");
             }
-            
+
             var entry = new Entry
             {
                 Title = entryDto.Title,
@@ -42,25 +42,50 @@ namespace API.Controllers
         }
 
         [HttpPut("update/{id}")]
-        public async Task<IActionResult> UpdateEntry(EntryDto entryDto, int id)
+        public async Task<IActionResult> UpdateEntry(int id, [FromBody] EntryDto entryDto)
         {
-            var user = await _context.Users.SingleOrDefaultAsync(x => x.UserName == entryDto.UserName);
-            
-            if (id != entryDto.Id)
+            // Validate incoming data
+            if (entryDto == null || string.IsNullOrEmpty(entryDto.Title) || string.IsNullOrEmpty(entryDto.Description))
             {
-                return BadRequest();
+                return BadRequest("Invalid entry data");
             }
 
-            var entry = new Entry
+            // Check if the entry exists
+            var existingEntry = await _context.Entries.FindAsync(id);
+            if (existingEntry == null)
             {
-                Id = entryDto.Id,
-                Title = entryDto.Title,
-                Description = entryDto.Description
-            };
+                return NotFound("Entry not found");
+            }
 
-            await _entryRepository.UpdateEntryAsync(entry);
-            return NoContent();
+            // Check if the user exists (optional)
+            var user = await _context.Users.SingleOrDefaultAsync(x => x.UserName == entryDto.UserName);
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            // Update the entry
+            existingEntry.Title = entryDto.Title;
+            existingEntry.Description = entryDto.Description;
+
+            // Save changes to the database
+            try
+            {
+                await _context.SaveChangesAsync();
+                return NoContent();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                // Handle concurrency conflicts
+                return Conflict("Concurrency conflict occurred");
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions
+                return StatusCode(500, "Internal server error");
+            }
         }
+
 
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteEntry(int id)

@@ -1,11 +1,11 @@
 <div class="container mt-5">
     <div *ngIf="!registerMode" style="text-align: center;">
         <h1>Track Your NA Brews!</h1>
-        <p class="lead">Come on in to keep track of your favorite non-alcoholic beers... 
+        <img src="../../assets/img/beer-mug.jpg" alt="A beer glass full of non-alcoholic beer" width="500">
+        <p class="lead">Keep track of your favorite non-alcoholic beers... 
             all you need to do is sign up!</p>
         <div class="text-center">
-            <button (click)="registerToggle()" class="btn btn-primary btn-lg me-2">Register</button>
-            <button class="btn btn-primary btn-lg">Learn more</button>
+            <button (click)="registerToggle()" class="btn btn-primary btn-lg bg-dark me-2 border-dark">Register</button>
         </div>
     </div>
 

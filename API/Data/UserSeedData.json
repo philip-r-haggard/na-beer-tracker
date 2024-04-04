@@ -9,7 +9,12 @@
         "Country": "French Southern Territories",
         "Entries": [
             {
-                "Title": "NA Hazy IPA"
+                "Title": "NA Hazy IPA",
+                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
+            },
+            {
+                "Title": "NA Lager",
+                "Description": "A good classic American lager."
             }
         ]
     },
@@ -23,7 +28,12 @@
         "Country": "Macau",
         "Entries": [
             {
-                "Title": "NA Hazy IPA"
+                "Title": "NA Hazy IPA",
+                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
+            },
+            {
+                "Title": "NA Lager",
+                "Description": "A good classic American lager."
             }
         ]
     },
@@ -37,7 +47,12 @@
         "Country": "Croatia (Hrvatska)",
         "Entries": [
             {
-                "Title": "NA Hazy IPA"
+                "Title": "NA Hazy IPA",
+                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
+            },
+            {
+                "Title": "NA Lager",
+                "Description": "A good classic American lager."
             }
         ]
     },
@@ -51,7 +66,12 @@
         "Country": "Mexico",
         "Entries": [
             {
-                "Title": "NA Hazy IPA"
+                "Title": "NA Hazy IPA",
+                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
+            },
+            {
+                "Title": "NA Lager",
+                "Description": "A good classic American lager."
             }
         ]
     },
@@ -65,7 +85,12 @@
         "Country": "Nauru",
         "Entries": [
             {
-                "Title": "NA Hazy IPA"
+                "Title": "NA Hazy IPA",
+                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
+            },
+            {
+                "Title": "NA Lager",
+                "Description": "A good classic American lager."
             }
         ]
     },
@@ -79,7 +104,12 @@
         "Country": "Iceland",
         "Entries": [
             {
-                "Title": "NA Lager"
+                "Title": "NA Hazy IPA",
+                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
+            },
+            {
+                "Title": "NA Lager",
+                "Description": "A good classic American lager."
             }
         ]
     },
@@ -93,7 +123,12 @@
         "Country": "Pitcairn",
         "Entries": [
             {
-                "Title": "NA Lager"
+                "Title": "NA Hazy IPA",
+                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
+            },
+            {
+                "Title": "NA Lager",
+                "Description": "A good classic American lager."
             }
         ]
     },
@@ -107,7 +142,12 @@
         "Country": "Sweden",
         "Entries": [
             {
-                "Title": "NA Lager"
+                "Title": "NA Hazy IPA",
+                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
+            },
+            {
+                "Title": "NA Lager",
+                "Description": "A good classic American lager."
             }
         ]
     },
@@ -121,7 +161,12 @@
         "Country": "Angola",
         "Entries": [
             {
-                "Title": "NA Lager"
+                "Title": "NA Hazy IPA",
+                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
+            },
+            {
+                "Title": "NA Lager",
+                "Description": "A good classic American lager."
             }
         ]
     },
@@ -135,7 +180,12 @@
         "Country": "Estonia",
         "Entries": [
             {
-                "Title": "NA Lager"
+                "Title": "NA Hazy IPA",
+                "Description": "A hazy IPA with a citrusy aroma and a smooth finish."
+            },
+            {
+                "Title": "NA Lager",
+                "Description": "A good classic American lager."
             }
         ]
     }

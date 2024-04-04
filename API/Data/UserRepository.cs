@@ -54,6 +54,25 @@ public class UserRepository : IUserRepository
         .ToListAsync();
     }
 
+    public async Task<IEnumerable<MemberWithEntriesDto>> GetMembersWithEntriesAsync()
+    {
+        var usersWithEntries = await _context.Users
+            .Include(u => u.Entries)
+            .Select(u => new MemberWithEntriesDto
+            {
+                Username = u.UserName,
+                KnownAs = u.KnownAs,
+                Entries = u.Entries.Select(e => new EntryDto
+                {
+                    Title = e.Title,
+                    Description = e.Description
+                }).ToList()
+            })
+            .ToListAsync();
+
+        return usersWithEntries;
+    }
+
     public async Task<bool> SaveAllAsync()
     {
         return await _context.SaveChangesAsync() > 0;

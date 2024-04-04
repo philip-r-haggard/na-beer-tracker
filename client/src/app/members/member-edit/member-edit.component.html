@@ -5,7 +5,7 @@
     <div class="col-8">
         <div class="alert alert-info pb-0" *ngIf="editForm.dirty">
             <p><strong>Information: </strong>You have made changes. Any unsaved changes will
-            be lost.</p>
+                be lost.</p>
         </div>
     </div>
     <div class="col-4">
@@ -33,8 +33,8 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button type="submit" [disabled]="!editForm.dirty" 
-                form="editForm" class="btn btn-success col-12">Save changes</button>
+                <button type="submit" [disabled]="!editForm.dirty" form="editForm" class="btn btn-success col-12">Save
+                    changes</button>
             </div>
         </div>
     </div>
@@ -52,8 +52,49 @@
                 </div>
             </div>
         </form>
+        <form (ngSubmit)="createEntry(member.userName)">
+            <div class="form-group">
+                <label style="margin-top: 15px;">Title:</label>
+                <input type="text" [(ngModel)]="newEntryTitle" name="title" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Description:</label>
+                <textarea [(ngModel)]="newEntryDescription" name="description" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Create Entry</button>
+        </form>
         <div class="col-8 mt-8" style="margin-top: 40px;">
-            <p>Entry edit will go here</p>
+            <h4>User Entries:</h4>
+            <div *ngFor="let entry of userEntries" class="entry-box">
+                <div class="entry">
+                    <div>
+                        <strong>Title:</strong>
+                        <p>{{ entry.title }}</p>
+                    </div>
+                    <div>
+                        <strong>Description:</strong>
+                        <p>{{ entry.description }}</p>
+                    </div>
+                    <!-- Edit button -->
+                    <button (click)="editEntry(entry)" class="btn btn-primary" style="margin-right: 10px;">Edit</button>
+                    <!-- Delete button -->
+                    <button (click)="deleteEntry(entry.id)" class="btn btn-danger">Delete</button>
+                    <!-- Edit form -->
+                    <div *ngIf="entry.id === editedEntry.id">
+                        <h4>Edit Entry</h4>
+                        <form (submit)="updateEntry(entry)">
+                            <div class="form-group">
+                                <label>Title:</label>
+                                <input type="text" [(ngModel)]="editedEntry.title" name="title" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Description:</label>
+                                <textarea [(ngModel)]="editedEntry.description" name="description" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

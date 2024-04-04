@@ -2,7 +2,9 @@ import { HttpBackend, HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Member } from '../_modules/member';
-import { map, of } from 'rxjs';
+import { Observable, map, of } from 'rxjs';
+import { Entry } from '../_modules/entry';
+import { EntryDto } from '../_models/entryDto';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +12,7 @@ import { map, of } from 'rxjs';
 export class MembersService {
   baseUrl = environment.apiUrl;
   members: Member[] = [];
+  usersWithEntries: any[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -36,5 +39,29 @@ export class MembersService {
         this.members[index] = {...this.members[index], ...member}
       })
     )
+  }
+
+  getEntriesForUser(username: string): Observable<any[]> {
+    return this.http.get<any[]>(this.baseUrl + 'users/' + username + '/entries');
+  }
+
+  getMemberWithEntries(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseUrl + 'users/withentries');
+  }
+
+  // Method to create a new entry for a user
+  createEntry(entryDto: EntryDto): Observable<any> {
+    return this.http.post<any>(this.baseUrl + 'entries/create', entryDto);
+  }
+  
+
+  // Method to update an existing entry
+  updateEntry(entryDto: EntryDto, entryId: number): Observable<any> {
+    return this.http.put(this.baseUrl + 'entries/update/' + entryId, entryDto);
+  }
+
+  // Method to delete an entry
+  deleteEntry(entryId: number) {
+    return this.http.delete(this.baseUrl + 'entries/delete/' + entryId);
   }
 }

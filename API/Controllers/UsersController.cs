@@ -36,6 +36,26 @@ public class UsersController : BaseApiController
         return await _userRepository.GetMemberAsync(username);
     }
 
+    [HttpGet("withentries")]
+    public async Task<ActionResult<IEnumerable<MemberWithEntriesDto>>> GetUsersWithEntries()
+    {
+        var usersWithEntries = await _userRepository.GetMembersWithEntriesAsync();
+        return Ok(usersWithEntries);
+    }
+
+    [HttpGet("{username}/entries")]
+    public async Task<ActionResult<IEnumerable<EntryDto>>> GetUserEntries(string username)
+    {
+        var user = await _userRepository.GetUserByUsernameAsync(username);
+        if (user == null)
+        {
+            return NotFound();
+        }
+
+        var entryDtos = _mapper.Map<IEnumerable<EntryDto>>(user.Entries);
+        return Ok(entryDtos);
+    }
+
     [HttpPut]
     public async Task<ActionResult> UpdateUser(MemberUpdateDto memberUpdateDto)
     {

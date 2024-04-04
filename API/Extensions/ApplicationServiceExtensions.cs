@@ -1,4 +1,5 @@
-﻿using API.Data;
+﻿using System.Text.Json.Serialization;
+using API.Data;
 using API.Interfaces;
 using API.Services;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +10,8 @@ public static class ApplicationServiceExtensions
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
     {
-        services.AddDbContext<DataContext>(opt => {
+        services.AddDbContext<DataContext>(opt =>
+        {
             opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
         });
 
@@ -17,6 +19,7 @@ public static class ApplicationServiceExtensions
         services.AddScoped<ITokenService, TokenService>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+        services.AddScoped<IEntryRepository, EntryRepository>();
 
         return services;
     }

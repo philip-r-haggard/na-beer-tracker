@@ -1,8 +1,22 @@
 <div class="row">
     <div class="col-2">
-        <p *ngFor="let member of members$ | async" 
-        class="member-button bg-dark" routerLink="/members/{{member.userName}}">
+        <p *ngFor="let member of members$ | async" class="member-button bg-dark"
+            routerLink="/members/{{member.userName}}">
             {{member.knownAs}}
         </p>
     </div>
+</div>
+
+<div *ngFor="let user of usersWithEntries">
+    <h2>{{ user.userName }}</h2>
+    <p>Date of Birth: {{ user.dateOfBirth }}</p>
+    <p>City: {{ user.city }}</p>
+    <p>Country: {{ user.country }}</p>
+    <h3>Entries:</h3>
+    <ul>
+        <li *ngFor="let entry of user.entries">
+            <h4>{{ entry.title }}</h4>
+            <p>{{ entry.description }}</p>
+        </li>
+    </ul>
 </div>
